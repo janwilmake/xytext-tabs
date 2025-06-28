@@ -1,0 +1,5 @@
+name="xytext-tabs"
+main="tabs.js"
+route.custom_domain = true
+route.pattern = "tabs.xytext.com"
+compatibility_date = "2025-06-01"
