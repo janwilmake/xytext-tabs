@@ -1,3 +1,14 @@
+/// <reference types="@cloudflare/workers-types" />
+/// <reference types="workers-metadata-types" />
+/// <reference lib="esnext" />
+//@ts-check
+
+/**
+ * @type {import('workers-metadata-types').Metadata}
+ */
+export const metadata = {
+  // Your worker configuration.
+};
 // Cloudflare Worker
 const FILES = {
   "index.html": {
