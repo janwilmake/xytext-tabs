@@ -5,6 +5,7 @@
 
 /**
  * @type {import('workers-metadata-types').Metadata}
+ * @see https://deploy.flaredream.com/index.d.ts
  */
 export const metadata = {
   // Your worker configuration.
@@ -249,7 +250,13 @@ function generateHTML(currentFile) {
 }
 
 export default {
-  async fetch(request) {
+  /**
+   * @param {Request} request
+   * @param {{}} env
+   * @param {ExecutionContext} ctx
+   * @returns {Promise<Response>}
+   */
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     let path = url.pathname.slice(1); // Remove leading slash
 
